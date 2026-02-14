@@ -11,6 +11,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -21,6 +23,14 @@ jobs:
 
       - name: Version Packages
         run: npx changeset version
+
+      - name: Commit Version Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .
+          git commit -m "chore: version packages [skip ci]" || echo "No changes to commit"
+          git push
 
       - name: Publish Packages
         run: npx changeset publish
