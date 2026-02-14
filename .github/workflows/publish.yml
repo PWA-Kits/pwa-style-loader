@@ -1,4 +1,4 @@
-name: Release
+name: Release to NPM
 
 on:
   push:
@@ -18,7 +18,6 @@ jobs:
           registry-url: https://registry.npmjs.org/
 
       - run: npm ci
-      - run: npm run build
 
       - name: Version Packages
         run: npx changeset version
