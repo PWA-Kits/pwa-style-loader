@@ -2,11 +2,9 @@
 
 Enable vanilla CSS 🍦 support in Salesforce PWA Kit — instantly.
 
-`pwa-style-loader` is a lightweight CLI that adds global CSS capability to Salesforce PWA Kit projects safely and quickly.
+`pwa-kit-style-loader` is a lightweight CLI that adds global CSS capability to Salesforce PWA Kit projects safely and quickly.
 
 Built for simplicity and enterprise environments.
-
----
 
 ## Why?
 
@@ -17,11 +15,9 @@ Instead of manually configuring build files and risking setup issues, this CLI e
 ## ⚡ Usage
 
 ```bash
-npm install pwa-style-loader
-npx pwa-style-loader
+npm install pwa-kit-style-loader
+npx pwa-kit-style-loader
 ```
-
----
 
 ## 🛠 What It Does
 
@@ -30,7 +26,17 @@ npx pwa-style-loader
 - Prompts before modifying existing files
 - Makes no silent changes
 
----
+## ⚠️ Important Note
+
+This tool is intended **only for projects using Salesforce B2C Commerce (SFCC) PWA Kit with the extensibility / override architecture enabled**.
+
+It will not work in:
+
+- Standard React projects
+- Non-PWA Kit applications
+- Projects that do not extend `@salesforce/retail-react-app`
+
+Please ensure your project follows the official PWA Kit extensibility structure before running this CLI.
 
 ## Designed For
 
@@ -38,8 +44,6 @@ npx pwa-style-loader
 - Safe configuration workflows
 - Repeatable setup
 - Clean project structure
-
----
 
 ## Roadmap
 
@@ -51,8 +55,8 @@ npx pwa-style-loader
 Abhisek Maiti  
 SFCC / PWA Kit Developer
 
-- GitHub: https://github.com/abhisekmaiti19
-- LinkedIn: https://linkedin.com/in/abhisekmaiti19
+- GitHub: [https://github.com/abhisekmaiti19](https://github.com/abhisekmaiti19)
+- LinkedIn: [https://linkedin.com/in/abhisekmaiti19](https://linkedin.com/in/abhisekmaiti19)
 
 ## 📄 License
 
